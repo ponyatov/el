@@ -1,0 +1,108 @@
+LIBRARY INFORMATION
+===================
+Library file......: C:\Program Files (x86)\Labcenter Electronics\Proteus 7 Professional\LIBRARY\USERDVC.LIB
+Library version...: 4.00.
+Number of objects.: 3
+Maximum objects...: 1000
+Number of prefixes: 0
+Maximum prefixes..: 0
+
+3 SELECTED OBJECTS
+==================
+Object name.......: AU-Y1006-R
+Last modified.....: 13 августа 2013 г. 17:06:12
+File offset (hex).: 00008CAB (Hex).
+Checksum (hex)....: 5060 (Hex).
+Size (bytes)......: 3,979
+Properties........: {*DEVICE}
+                    {PREFIX=J}
+                    {ACTIVE=USBCONN,2}
+                    {HELP=VUSB.HLP,0}
+                    {*PROPDEFS}
+                    {MODFILE="LISA Model File",HIDDEN STRING}
+                    {STATE="Active State",HIDDEN STRING}
+                    {PACKAGE="PCB Package",PACKAGE,1,CON4_1X4_DUSB_AM}
+                    {*INDEX}
+                    {CAT=Connectors}
+                    {SUBCAT=USB for PCB Mounting}
+                    {MFR=Assmann}
+                    {DESC=CONN USB RTANG FEMALE TYPE A SMD}
+                    {CODE=Digikey AE9924-ND}
+                    {*COMPONENT}
+                    {MODFILE=USBCONN.MDF}
+                    {STATE=0}
+                    
+                    {PACKAGE=CON4_1X4_DUSB_AM}
+                    *PINOUT CON4_1X4_DUSB_AM
+                    {ELEMENTS=1}
+                    {PIN "D+" = 2}
+                    {PIN "D-" = 3}
+                    {PIN "GND" = 4}
+                    {PIN "VCC" = 1}
+
+
+Object name.......: CONN-SIL9
+Last modified.....: 13 августа 2013 г. 17:39:15
+File offset (hex).: 0000A5F7 (Hex).
+Checksum (hex)....: 0781 (Hex).
+Size (bytes)......: 2,003
+Properties........: {*DEVICE}
+                    {PREFIX=J}
+                    {*PROPDEFS}
+                    {PACKAGE="PCB Package",PACKAGE,2,CONN-SIL9,CONN-SIL9-ROUND}
+                    {*INDEX}
+                    {CAT=Connectors}
+                    {SUBCAT=SIL}
+                    {DESC=0.1in pitch SIL connector strip}
+                    {*COMPONENT}
+                    
+                    {PACKAGE=CONN-SIL9}
+                    *PINOUT CONN-SIL9
+                    {ELEMENTS=1}
+                    {PIN "1" = 1}
+                    {PIN "2" = 2}
+                    {PIN "3" = 3}
+                    {PIN "4" = 4}
+                    {PIN "5" = 5}
+                    {PIN "6" = 6}
+                    {PIN "7" = 7}
+                    {PIN "8" = 8}
+                    {PIN "9" = 9}
+                    
+                    *PINOUT CONN-SIL9-ROUND
+                    {ELEMENTS=1}
+                    {PIN "1" = 1}
+                    {PIN "2" = 2}
+                    {PIN "3" = 3}
+                    {PIN "4" = 4}
+                    {PIN "5" = 5}
+                    {PIN "6" = 6}
+                    {PIN "7" = 7}
+                    {PIN "8" = 8}
+                    {PIN "9" = 9}
+
+
+Object name.......: TERMINAL
+Last modified.....: 13 августа 2013 г. 17:06:35
+File offset (hex).: 00009C36 (Hex).
+Checksum (hex)....: 7810 (Hex).
+Size (bytes)......: 494
+Properties........: {*DEVICE}
+                    PREFIX=J
+                    {*PROPDEFS}
+                    {PRIMITIVE=Primitive Type,HIDDEN STRING}
+                    {PACKAGE="PCB Package",PACKAGE,1,PIN}
+                    {*INDEX}
+                    {CAT=Connectors}
+                    {SUBCAT=Miscellaneous}
+                    {DESC=Single pin terminal}
+                    {*COMPONENT}
+                    {PRIMITIVE=NULL}
+                    
+                    {PACKAGE=PIN}
+                    *PINOUT PIN
+                    {ELEMENTS=1}
+                    {PIN "1" = 1}
+
+
+

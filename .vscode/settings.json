@@ -1,0 +1,57 @@
+{
+    "multiCommand.commands": [
+        { "command": "multiCommand.f11",
+            "sequence": [
+                "workbench.action.files.saveAll",
+                { "command": "workbench.action.terminal.sendSequence",
+                    "args": {"text": "\u000D clear ; LANG=C make format \u000D"}}]
+        },
+        { "command": "multiCommand.f12",
+            "sequence": [
+                "workbench.action.files.saveAll",
+                { "command": "workbench.action.terminal.sendSequence",
+                    "args": {"text": "\u000D clear ; LANG=C make all \u000D"}}]
+        }
+    ],
+
+    // files
+    "files.exclude": {
+        "docs/**": true,
+		".vscode/*.log": true
+	},
+    "files.watcherExclude": {
+        "docs/**": true
+    },
+    "files.associations": {
+        "*.ini": "forth"
+    },        
+
+    // editor
+    "editor.tabSize": 4,
+    "editor.rulers": [80],
+    "workbench.tree.indent": 24,
+    "explorer.autoReveal": false,
+    "files.insertFinalNewline": true,
+    "git.enabled": false,
+
+    // clang-format
+    "clang-format.executable":     "clang-format",
+    "clang-format.fallbackStyle":  "Google",
+    "clang-format.style":          "file",
+
+    // C++
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave":     true
+    },
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    // cmake
+    "cmake.buildDirectory":  "${workspaceFolder}/tmp/${workspaceFolderBasename}.vs",
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.configureArgs": [ "-DAPP=${workspaceFolderBasename}" ],
+    "cmake.debugConfig": {
+        "args": [
+            "${workspaceFolder}/lib/${workspaceFolderBasename}.ini"
+        ]
+    }
+}

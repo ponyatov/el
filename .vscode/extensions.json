@@ -7,5 +7,7 @@
 		// formatters
 		"xaver.clang-format",
 		"foxundermoon.shell-format",
+		// pcb
+		"xuanli.spice",
 	]
 }

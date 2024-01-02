@@ -33,6 +33,7 @@
     "explorer.autoReveal": false,
     "files.insertFinalNewline": true,
     "git.enabled": false,
+    "rewrap.wrappingColumn": 79,
 
     // clang-format
     "clang-format.executable":     "clang-format",
@@ -45,13 +46,5 @@
         "editor.formatOnSave":     true
     },
     "C_Cpp.intelliSenseEngine": "Tag Parser",
-    // cmake
-    "cmake.buildDirectory":  "${workspaceFolder}/tmp/${workspaceFolderBasename}.vs",
-    "cmake.sourceDirectory": "${workspaceFolder}",
-    "cmake.configureArgs": [ "-DAPP=${workspaceFolderBasename}" ],
-    "cmake.debugConfig": {
-        "args": [
-            "${workspaceFolder}/lib/${workspaceFolderBasename}.ini"
-        ]
-    }
+
 }

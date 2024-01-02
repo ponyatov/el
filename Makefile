@@ -8,7 +8,8 @@ BRANCH  = $(shell git rev-parse --abbrev-ref HEAD)
 CORES  ?= $(shell grep processor /proc/cpuinfo | wc -l)
 
 # version
-QUCS_VER = 2.1.0-1
+QUCS_VER    = 2.1.0-1
+RHVOICE_VER = 1.8.0
 
 # dirs
 CWD = $(CURDIR)
@@ -57,7 +58,7 @@ GNU_Linux_updev:
 
 # package
 .PHONY: gz
-gz: qucs
+gz: qucs rhvoice
 
 QUCS_URL = download.opensuse.org/repositories/home
 QUCS_APT = /etc/apt/sources.list.d/home_ra3xdh.list
@@ -72,6 +73,12 @@ $(QUCS): $(GZ)/qucs-s_$(QUCS_VER)_amd64.deb
 
 $(GZ)/qucs-s_$(QUCS_VER)_amd64.deb:
 	$(CURL) $@ https://download.opensuse.org/repositories/home:/ra3xdh/Debian_11/amd64/qucs-s_$(QUCS_VER)_amd64.deb
+
+.PHONY: rhvoice
+rhvoice: $(GZ)/rhvoice-$(RHVOICE_VER).tar.gz
+
+$(GZ)/rhvoice-$(RHVOICE_VER).tar.gz:
+	$(CURL) $@ https://github.com/RHVoice/RHVoice/releases/download/$(RHVOICE_VER)/rhvoice-$(RHVOICE_VER).tar.gz
 
 # merge
 MERGE += README.md Makefile .gitignore .doxygen apt.txt apt.dev LICENSE $(S)

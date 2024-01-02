@@ -28,6 +28,10 @@ QUCS   = /usr/bin/qucs-s
 .PHONY: all
 all:
 
+# slides
+slides:
+	cd shorts/00_hello/txt ; make -f ../../Makefile
+
 # format
 .PHONY: format
 format:

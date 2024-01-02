@@ -1,0 +1,30 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line          = lf
+insert_final_newline = true
+charset              = utf-8
+tab_width            = 4
+
+# 4 space indentation
+[*.{d}]
+indent_style = space
+indent_size  = 4
+trim_trailing_whitespace = true
+max_line_length = 80
+dfmt_soft_max_line_length = 60
+dfmt_brace_style = otbs
+dfmt_space_after_keywords = true
+dfmt_keep_line_breaks = false
+
+# [*.{dub.json}]
+# indent_style = space
+# indent_size  = 4
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab

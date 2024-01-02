@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"ryuta46.multi-command",
+		"stkb.rewrap",
+		// "tabnine.tabnine-vscode",
+		// "ms-vscode.makefile-tools",
+		// formatters
+		"xaver.clang-format",
+		"foxundermoon.shell-format",
+	]
+}

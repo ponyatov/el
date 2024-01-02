@@ -1,0 +1,3 @@
+git make curl rsync
+code meld doxygen clang-format
+kicad qucs-s ngspice gnuplot

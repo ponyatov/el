@@ -1,4 +1,6 @@
 */txt/*.png
 00_hello/17*
 *.mp4
+*.aux
+*.pdf
 !.gitignore

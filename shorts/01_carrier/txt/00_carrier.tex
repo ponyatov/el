@@ -1,0 +1,38 @@
+% \documentclass[oneside,10pt]{article}
+% \usepackage[paperheight=118.8mm,paperwidth=68.2mm,margin=2mm]{geometry}
+% https://tex.stackexchange.com/questions/108149/how-to-set-size-of-pdf-page-in-pixels-and-put-a-background-image
+% \pagestyle{empty}
+\documentclass[oneside,12pt]{article}
+% \documentclass[oneside]{standalone}
+% \usepackage[paperwidth=216.0pt,paperheight=384.0pt,margin=0pt]{geometry}
+% \usepackage[paperwidth=1080px,paperheight=1920px,margin=0px]{geometry}
+\usepackage[paperwidth=216.0pt,paperheight=384.0pt,margin=5pt]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\renewcommand{\familydefault}{\sfdefault}\normalfont
+\parindent=0pt
+
+\usepackage{xcolor}
+\definecolor{bg}{RGB}{22,22,22}
+\definecolor{lightgreen}{RGB}{144,238,144}
+\pagecolor{bg}
+
+\usepackage{enumitem}
+\setlist[description]{format=\textcolor{yellow!30}}
+
+% \setlength{\oddsidemargin}{0px}
+% \usepackage{indentfirst}
+\begin{document}
+% \textcolor(lightgreen)
+% \color(lightgreen)
+\setcounter{section}{0}
+\section{Носители заряда}
+
+\color{lightgreen}
+\begin{description}
+    \item[металл и вакуум]\ \\ электроны
+    \item[электролит]\ \\ положительные и отрицательные\\ ионы 
+    \item[газ/плазма]\ \\ положительные ионы и электроны
+    \item[полупроводник]\ \\ электроны и дырки\\ (от электронов)
+\end{description}
+\end{document}

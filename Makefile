@@ -30,7 +30,8 @@ all:
 
 # slides
 slides:
-	cd shorts/00_hello/txt ; make -f ../../Makefile
+#	cd shorts/00_hello/txt ; make -f ../../Makefile
+	cd shorts/01_carrier/txt ; make -f ../../Makefile
 
 # format
 .PHONY: format

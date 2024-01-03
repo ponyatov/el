@@ -47,4 +47,7 @@
     },
     "C_Cpp.intelliSenseEngine": "Tag Parser",
 
+    // TeX
+    "latex-workshop.latex.autoBuild.run": "never",
+
 }

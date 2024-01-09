@@ -1,0 +1,72 @@
+(session "C:\el\pcb\usb\mini\mini.ses"
+(base_design "..\mini.dsn")
+      (placement 
+         (resolution mm 100000)
+         (component "connector:USB_Mini-B_DS1104"
+            (place "J1" 13335000 -8890000 front 270.00)
+         )
+         (component "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm"
+            (place "U1" 15240000 -9017000 front 90.00)
+         )
+      )
+      (routes
+         (resolution mm 100000)
+         (library_out
+            (padstack "Via[0-1]_800:400_um"
+               (shape (circ signal 80000 0 0))
+            )
+         )
+         (network_out
+            (net "unconnected-(J1-Pad1)"
+            )
+            (net "/D-"
+            (wire (path "F.Cu" 50000 15430500 -9264500 15412620 -9167510 15412620 -9143680 15260780 -8991840
+             13964470 -8991840 13782630 -8810000 13720000 -8810000 13595000 -8810000))
+            )
+            (net "/D+"
+            (wire (path "F.Cu" 50000 15303500 -9264500 15285620 -9167510 15285620 -9150310 15227200 -9091890
+             13951150 -9091890 13749260 -8890000 13720000 -8890000 13595000 -8890000))
+            )
+            (net "unconnected-(J1-Pad4)"
+            )
+            (net "unconnected-(U1-Pad2)"
+            )
+            (net "unconnected-(U1-Pad3)"
+            )
+            (net "unconnected-(U1-Pad4)"
+            )
+            (net "unconnected-(U1-Pad7)"
+            )
+            (net "unconnected-(U1-Pad8)"
+            )
+            (net "unconnected-(U1-Pad9)"
+            )
+            (net "unconnected-(U1-Pad10)"
+            )
+            (net "unconnected-(U1-Pad11)"
+            )
+            (net "unconnected-(U1-Pad12)"
+            )
+            (net "unconnected-(U1-Pad13)"
+            )
+            (net "unconnected-(U1-Pad14)"
+            )
+            (net "unconnected-(U1-Pad15)"
+            )
+            (net "unconnected-(U1-Pad16)"
+            )
+            (net "GND"
+            (wire (path "F.Cu" 50000 13595000 -8450000 13495000 -8507050 13470000 -8507050 13170000 -8507050
+             13145000 -8507050 13045000 -8450000))
+            (wire (path "F.Cu" 50000 14795500 -9264500 14790440 -9297250 14765440 -9297250 13720000 -9297250
+             13695000 -9297250 13595000 -9330000))
+            (wire (path "F.Cu" 50000 13045000 -8450000 13045000 -8525000 13045000 -8550000 13045000 -9230000
+             13045000 -9255000 13045000 -9330000))
+            (wire (path "F.Cu" 50000 13045000 -9330000 13145000 -9272950 13170000 -9272950 13470000 -9272950
+             13495000 -9272950 13595000 -9330000))
+            (wire (path "F.Cu" 50000 13595000 -9330000 13595000 -9255000 13595000 -9230000 13595000 -9075000
+             13595000 -9050000))
+            )
+         )
+      )
+   )

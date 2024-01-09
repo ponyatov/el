@@ -1,0 +1,8 @@
+gerber/
+*.lock
+*.fsx*
+*info-cache
+*backups*
+autoroute*
+*auto_saved*
+!.gitignore

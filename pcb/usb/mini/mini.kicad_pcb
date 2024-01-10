@@ -89,7 +89,7 @@
   )
 
   (net 0 "")
-  (net 1 "unconnected-(J1-Pad1)")
+  (net 1 "VCC5")
   (net 2 "/D-")
   (net 3 "/D+")
   (net 4 "unconnected-(J1-Pad4)")
@@ -222,7 +222,7 @@
     (pad "" np_thru_hole circle (at 2.2 0 270) (size 0.9 0.9) (drill 0.9) (layers *.Cu *.Mask) (tstamp 78d34746-a574-4664-853e-cc05b95b09b1))
     (pad "" np_thru_hole circle (at -2.2 0 270) (size 0.9 0.9) (drill 0.9) (layers *.Cu *.Mask) (tstamp a9e168da-f68a-4eb8-aca5-780969428cb6))
     (pad "1" smd rect (at -1.6 -2.6 270) (size 0.5 2.5) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 1 "unconnected-(J1-Pad1)") (pinfunction "VBUS") (pintype "power_out") (tstamp 9e2d789e-21cc-468b-a8fc-7832c6a81d6b))
+      (net 1 "VCC5") (pinfunction "VBUS") (pintype "power_out") (tstamp 9e2d789e-21cc-468b-a8fc-7832c6a81d6b))
     (pad "2" smd rect (at -0.8 -2.6 270) (size 0.5 2.5) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 2 "/D-") (pinfunction "D-") (pintype "bidirectional") (tstamp 7207fe2a-b264-4e3f-8600-89778fe146af))
     (pad "3" smd rect (at 0 -2.6 270) (size 0.5 2.5) (layers "F.Cu" "F.Paste" "F.Mask")

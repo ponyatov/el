@@ -28,6 +28,12 @@ QUCS   = /usr/bin/qucs-s
 .PHONY: all
 all:
 
+# clean
+.PHONY: clean
+clean:
+	find pcb -type d -regex '.+backup.*' -exec echo rm -rf {} \;
+	find pcb -type d -regex '.+/autoroute_.+' -exec rm -rf {} \;
+
 # slides
 slides:
 #	cd shorts/00_hello/txt ; make -f ../../Makefile

@@ -387,11 +387,11 @@
         )
       )
     )
-    (symbol "connector:USB_B_Mini" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+    (symbol "connector:M-1J" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "J" (id 0) (at -5.08 11.43 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Value" "USB_B_Mini" (id 1) (at -5.08 8.89 0)
+      (property "Value" "M-1J" (id 1) (at -5.08 8.89 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
       (property "Footprint" "" (id 2) (at 3.81 -1.27 0)
@@ -409,7 +409,7 @@
       (property "ki_fp_filters" "USB*" (id 6) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "USB_B_Mini_0_1"
+      (symbol "M-1J_0_1"
         (rectangle (start -5.08 -7.62) (end 5.08 7.62)
           (stroke (width 0.254) (type default) (color 0 0 0 0))
           (fill (type background))
@@ -511,7 +511,7 @@
           (fill (type none))
         )
       )
-      (symbol "USB_B_Mini_1_1"
+      (symbol "M-1J_1_1"
         (pin power_out line (at 7.62 5.08 180) (length 2.54)
           (name "VBUS" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
@@ -915,13 +915,13 @@
     (pin "1" (uuid b9e99714-7527-4b0c-a5b6-e81a753e576f))
   )
 
-  (symbol (lib_id "connector:USB_B_Mini") (at 82.55 88.9 0) (unit 1)
+  (symbol (lib_id "connector:M-1J") (at 82.55 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid ce1752a3-7b9b-4e5d-a7cf-dfe02fc97064)
-    (property "Reference" "J1" (id 0) (at 77.47 77.47 0)
+    (property "Reference" "J?" (id 0) (at 77.47 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "USB_B_Mini" (id 1) (at 77.47 80.01 0)
+    (property "Value" "M-1J" (id 1) (at 77.47 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "connector:USB_Mini-B_DS1104" (id 2) (at 86.36 90.17 0)
@@ -1001,14 +1001,14 @@
     (path "/e9ad2ab0-19ef-4661-8971-9dce20427f24"
       (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
     )
-    (path "/ce1752a3-7b9b-4e5d-a7cf-dfe02fc97064"
-      (reference "J1") (unit 1) (value "USB_B_Mini") (footprint "connector:USB_Mini-B_DS1104")
-    )
     (path "/7e516f75-6c1a-4b57-b7bc-2c21da4bc555"
       (reference "J2") (unit 1) (value "Conn_01x03") (footprint "")
     )
     (path "/aa0eaef1-e2de-4828-9cb9-7fe98fa29c67"
       (reference "J3") (unit 1) (value "Conn_01x10_Male") (footprint "")
+    )
+    (path "/ce1752a3-7b9b-4e5d-a7cf-dfe02fc97064"
+      (reference "J?") (unit 1) (value "M-1J") (footprint "connector:USB_Mini-B_DS1104")
     )
     (path "/e3c48a62-3601-400c-9094-a10797422302"
       (reference "U1") (unit 1) (value "CH340C") (footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")

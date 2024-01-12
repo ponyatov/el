@@ -28,10 +28,13 @@ QUCS   = /usr/bin/qucs-s
 .PHONY: all
 all:
 
+# clean
 .PHONY: clean
 clean:
-	find pcb -type f -regex '.+.ses$$' -exec rm {} \;
-	find pcb -type f -regex '.+.dsn$$' -exec rm {} \;
+	find pcb -type f -regex '.+.ses$$'        -exec rm -rf {} \;
+	find pcb -type f -regex '.+.dsn$$'        -exec rm -rf {} \;
+	find pcb -type d -regex '.+backup.*'      -exec rm -rf {} \;
+	find pcb -type d -regex '.+/autoroute_.+' -exec rm -rf {} \;
 
 # slides
 slides:

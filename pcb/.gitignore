@@ -4,5 +4,8 @@ gerber/
 *info-cache
 *backups*
 autoroute*
-*auto_saved*
+*auto_save*
+*autosave*
+*.ses
+*.dsn
 !.gitignore

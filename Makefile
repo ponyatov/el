@@ -28,6 +28,11 @@ QUCS   = /usr/bin/qucs-s
 .PHONY: all
 all:
 
+.PHONY: clean
+clean:
+	find pcb -type f -regex '.+.ses$$' -exec rm {} \;
+	find pcb -type f -regex '.+.dsn$$' -exec rm {} \;
+
 # slides
 slides:
 #	cd shorts/00_hello/txt ; make -f ../../Makefile

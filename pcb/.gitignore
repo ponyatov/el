@@ -1,4 +1,5 @@
 gerber/
+copper/
 *.lock
 *.fsx*
 *info-cache

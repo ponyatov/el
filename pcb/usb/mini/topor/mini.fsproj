@@ -4,8 +4,8 @@
 <!--   Format  : TopoR Project file       -->
 <!--   Version : 2                        -->
 <!--   Program : TopoR Lite 7.0.18699     -->
-<!--   Date    : Friday, January 12, 2024 -->
-<!--   Time    : 18:56                    -->
+<!--   Date    : Monday, January 15, 2024 -->
+<!--   Time    : 17:28                    -->
 <!--**************************************-->
 
 <Project>
@@ -13,24 +13,33 @@
    <GUID>{F402BE07-AFD7-4F9F-8012-A3C35102DB9B}</GUID>
    <Documents>
       <Section name="PCB" isExpanded="true">
-         <File path=".\mini.fsx" isopened="0" dateChange="2024-01-09 17:50:45"/>
+         <File path=".\mini.fsx" isopened="0" dateChange="2024-01-12 17:44:42"/>
       </Section>
       <Section name="AutoRouting" isExpanded="true">
-         <File path=".\autoroute_240109173237\mini_60-0s.fsb" isopened="0" dateChange="2024-01-09 17:32:37"/>
-         <File path=".\autoroute_240109173547\mini_60-0s.fsb" isopened="0" dateChange="2024-01-09 17:35:47"/>
-         <File path=".\autoroute_240109174503\mini_60-0s.fsb" isopened="0" dateChange="2024-01-09 17:45:03"/>
-         <File path=".\autoroute_240109174524\mini_60-0s.fsb" isopened="0" dateChange="2024-01-09 17:45:24"/>
-         <File path=".\autoroute_240109174559\mini_60-0s.fsb" isopened="0" dateChange="2024-01-09 17:45:59"/>
-         <File path=".\autoroute_240112140608\mini_60-0s.fsb" isopened="0" dateChange="2024-01-12 14:06:08"/>
-         <File path=".\autoroute_240112140708\mini_60-0s.fsb" isopened="0" dateChange="2024-01-12 14:07:08"/>
-         <File path=".\autoroute_240109174654\mini_61-0s.fsb" isopened="0" dateChange="2024-01-09 17:47:06"/>
-         <File path=".\autoroute_240109173429\mini_62-0s.fsb" isopened="0" dateChange="2024-01-09 17:34:38"/>
-         <File path=".\autoroute_240112141451\mini_62-0s.fsb" isopened="0" dateChange="2024-01-12 14:14:51"/>
+         <File path=".\autoroute_240109173237\mini_60-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
+         <File path=".\autoroute_240109173547\mini_60-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
+         <File path=".\autoroute_240109174503\mini_60-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
+         <File path=".\autoroute_240109174524\mini_60-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
+         <File path=".\autoroute_240109174559\mini_60-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
+         <File path=".\autoroute_240112140608\mini_60-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
+         <File path=".\autoroute_240112140708\mini_60-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
+         <File path=".\autoroute_240109174654\mini_61-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
+         <File path=".\autoroute_240109173429\mini_62-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
+         <File path=".\autoroute_240112141451\mini_62-0s.fsb" isopened="0" dateChange="1601-01-01 00:00:00"/>
          <File path=".\autoroute_240112174356\mini_84-4s.fsb" isopened="0" dateChange="2024-01-12 17:43:56"/>
          <File path=".\autoroute_240112174416\mini_85-0s.fsb" isopened="0" dateChange="2024-01-12 17:44:25"/>
          <File path=".\autoroute_240112155312\mini_86-0s.fsb" isopened="0" dateChange="2024-01-12 15:53:21"/>
          <File path=".\autoroute_240112155202\mini_102-0s.fsb" isopened="0" dateChange="2024-01-12 15:52:17"/>
          <File path=".\autoroute_240112155122\mini_102-4s.fsb" isopened="0" dateChange="2024-01-12 15:51:23"/>
+         <File path=".\autoroute_240115172635\mini_168-8s.fsb" isopened="0" dateChange="2024-01-15 17:26:35"/>
+         <File path=".\autoroute_240115172145\mini_203-0s.fsb" isopened="0" dateChange="2024-01-15 17:22:01"/>
+         <File path=".\autoroute_240115171820\mini_209-4s.fsb" isopened="0" dateChange="2024-01-15 17:18:20"/>
+         <File path=".\autoroute_240115171853\mini_209-6s.fsb" isopened="0" dateChange="2024-01-15 17:18:54"/>
+         <File path=".\autoroute_240115172007\mini_218-0s.fsb" isopened="0" dateChange="2024-01-15 17:20:41"/>
+         <File path=".\autoroute_240115170327\mini_274-0s.fsb" isopened="0" dateChange="2024-01-15 17:03:42"/>
+         <File path=".\autoroute_240115170140\mini_295-0s.fsb" isopened="0" dateChange="2024-01-15 17:01:56"/>
+         <File path=".\autoroute_240115170033\mini_295-1s.fsb" isopened="0" dateChange="2024-01-15 17:00:38"/>
+         <File path=".\autoroute_240115172752\mini_233-0s.fsb" isopened="0" dateChange="2024-01-15 17:28:18"/>
       </Section>
    </Documents>
    <Import>

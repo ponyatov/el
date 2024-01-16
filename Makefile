@@ -31,8 +31,11 @@ all:
 # clean
 .PHONY: clean
 clean:
-	find pcb -type d -regex '.+backup.*' -exec echo rm -rf {} \;
-	find pcb -type d -regex '.+/autoroute_.+' -exec rm -rf {} \;
+	find pcb -type f -regex '.+.ses$$'        -exec rm -rf {} \; &
+	find pcb -type f -regex '.+.dsn$$'        -exec rm -rf {} \; &
+	find pcb -type d -regex '.+backup.*'      -exec rm -rf {} \; &
+	find pcb -type d -regex '.+/autoroute_.+' -exec rm -rf {} \; &
+	find pcb -type d -regex '.+/topor$$'      -exec rm -rf {} \; &
 
 # slides
 slides:

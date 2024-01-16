@@ -48,7 +48,10 @@ format:
 
 # doc
 .PHONY: doc
-doc:
+doc: doc/TopoR_7.0rus.pdf
+
+doc/TopoR_7.0rus.pdf:
+	$(CURL) $@ https://www.eremex.ru/upload/iblock/c5d/TopoR_7.0rus.pdf
 
 # install
 .PHONY:  install update updev

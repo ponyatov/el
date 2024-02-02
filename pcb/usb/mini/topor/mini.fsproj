@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--***************************************-->
+<!--   File    : mini.fsproj               -->
+<!--   Format  : TopoR Project file        -->
+<!--   Version : 2                         -->
+<!--   Program : TopoR Lite 7.0.18699      -->
+<!--   Date    : Friday, February 02, 2024 -->
+<!--   Time    : 09:35                     -->
+<!--***************************************-->
+
+<Project>
+   <Version current="2"/>
+   <GUID>{9EF73EB0-83F2-4956-879F-8B1830F6F3FC}</GUID>
+   <Documents>
+      <Section name="PCB" isExpanded="false">
+         <File path=".\mini.fsx" isopened="1" dateChange="2024-02-02 09:25:57"/>
+      </Section>
+      <Section name="AutoRouting" isExpanded="false">
+         <File path=".\autoroute_240202093407\mini_336-0s.fsb" isopened="0" dateChange="2024-02-02 09:34:24"/>
+         <File path=".\autoroute_240202093154\mini_1019-6s.fsb" isopened="0" dateChange="2024-02-02 09:31:55"/>
+         <File path=".\autoroute_240202093538\mini_325-0s.fsb" isopened="0" dateChange="2024-02-02 09:35:56"/>
+      </Section>
+   </Documents>
+</Project>

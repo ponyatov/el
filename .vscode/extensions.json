@@ -9,8 +9,8 @@
 		"foxundermoon.shell-format",
 		// pcb
 		"xuanli.spice",
-		// TeX
-		"james-yu.latex-workshop",
-		"tomoki1207.pdf",
+		// // TeX
+		// "james-yu.latex-workshop",
+		// "tomoki1207.pdf",
 	]
 }

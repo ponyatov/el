@@ -31,10 +31,11 @@ all:
 # clean
 .PHONY: clean
 clean:
-	find pcb -type f -regex '.+.ses$$'        -exec rm -rf {} \;
-	find pcb -type f -regex '.+.dsn$$'        -exec rm -rf {} \;
-	find pcb -type d -regex '.+backup.*'      -exec rm -rf {} \;
-	find pcb -type d -regex '.+/autoroute_.+' -exec rm -rf {} \;
+	find pcb -type f -regex '.+.ses$$'        -exec rm -rf {} \; &
+	find pcb -type f -regex '.+.dsn$$'        -exec rm -rf {} \; &
+	find pcb -type d -regex '.+backup.*'      -exec rm -rf {} \; &
+	find pcb -type d -regex '.+/autoroute_.+' -exec rm -rf {} \; &
+	find pcb -type d -regex '.+/topor$$'      -exec rm -rf {} \; &
 
 # slides
 slides:
@@ -47,7 +48,10 @@ format:
 
 # doc
 .PHONY: doc
-doc:
+doc: doc/TopoR_7.0rus.pdf
+
+doc/TopoR_7.0rus.pdf:
+	$(CURL) $@ https://www.eremex.ru/upload/iblock/c5d/TopoR_7.0rus.pdf
 
 # install
 .PHONY:  install update updev

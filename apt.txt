@@ -3,3 +3,4 @@ code meld doxygen clang-format
 kicad qucs-s ngspice gnuplot
 kdenlive festival
 xpdf texlive-latex-recommended texlive-latex-extra texlive-lang-cyrillic
+pulseview

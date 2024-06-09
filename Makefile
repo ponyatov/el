@@ -41,7 +41,8 @@ A += $(wildcard src/hw/*.S)
 A += $(wildcard src/cpu/*.S)
 A += $(wildcard src/arch/*.S)
 
-OBJ += $(subst src/,tmp/,$(addsuffix .o,$(basename $(A))))
+OBJ += $(shell echo $(addsuffix .o,$(basename $(A))) | bin/objpath )
+OBJ = $(shell echo $(A)|bin/objpath)
 
 # cfg
 LDSCRIPT = hw/$(HW).lds
@@ -50,9 +51,7 @@ LDFLAGS += -T $(LDSCRIPT)
 # all
 .PHONY: all run
 all: bin/$(MODULE).hex
-run: 
-# bin/$(MODULE).hex
-	echo $(OBJ)
+run: bin/$(MODULE).hex
 # $(QEMU) $(QEMU_CFG) -device loader,file=test.hex
 
 .PHONY: format
@@ -71,13 +70,16 @@ tmp/%.o: src/cpu/%.S
 tmp/%.o: src/hw/%.S
 	$(AS) -o $@ -c $<
 
+bin/objpath: src/objpath.lex
+	flex -o tmp/objpath.cpp $< && gcc -o $@ tmp/objpath.cpp
+
 # doc
 .PHONY: doc
 doc:
 
 # install
 .PHONY: install update ref gz
-install: doc ref gz $(QUCS)
+install: doc ref gz $(QUCS) bin/objpath
 	$(MAKE) update
 update:
 	sudo apt update

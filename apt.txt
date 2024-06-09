@@ -1,6 +1,5 @@
-git make curl rsync
+git make curl
 code meld doxygen clang-format
+g++ flex bison
 kicad qucs-s ngspice gnuplot
-kdenlive festival
-xpdf texlive-latex-recommended texlive-latex-extra texlive-lang-cyrillic
 pulseview

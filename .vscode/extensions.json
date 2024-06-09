@@ -19,6 +19,7 @@
         "daohong-emilio.yash",
         // low-level
         "zixuanwang.linkerscript",
+        "dan-c-underwood.arm",
         // Rust
         "rust-lang.rust-analyzer",
         "tamasfe.even-better-toml",

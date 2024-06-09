@@ -48,12 +48,15 @@ OBJ = $(shell echo $(A)|bin/objpath)
 # cfg
 LDSCRIPT = hw/$(HW).lds
 LDFLAGS += -T $(LDSCRIPT)
+FLAGS   += -g
+ASFLAGS += $(FLAGS)
 
 # all
 .PHONY: all run
 all: bin/$(MODULE).hex
 run: bin/$(MODULE).hex
-	$(QEMU) $(QEMU_CFG) -device loader,file=$<
+	$(QEMU) $(QEMU_CFG) -device loader,file=$< -S -s &
+	gdb-multiarch
 
 .PHONY: format
 format:
@@ -61,17 +64,17 @@ format:
 # rule
 bin/$(MODULE).hex: tmp/$(MODULE).o
 	$(OCP) -O ihex $< $@ && file $@
-tmp/$(MODULE).o: bin/objpath $(OBJ)
+tmp/$(MODULE).o: bin/objpath $(LDSCRIPT) $(OBJ)
 	$(LD) $(LDFLAGS) -o $@ $(OBJ)
 
 tmp/%.o: src/%.S
-	$(AS) -o $@ -c $<
+	$(AS) $(ASFLAGS) -o $@ -c $<
 tmp/%.o: src/arch/%.S
-	$(AS) -o $@ -c $<
+	$(AS) $(ASFLAGS) -o $@ -c $<
 tmp/%.o: src/cpu/%.S
-	$(AS) -o $@ -c $<
+	$(AS) $(ASFLAGS) -o $@ -c $<
 tmp/%.o: src/hw/%.S
-	$(AS) -o $@ -c $<
+	$(AS) $(ASFLAGS) -o $@ -c $<
 
 bin/objpath: src/objpath.lex
 	flex -o tmp/objpath.c $< && gcc -o $@ tmp/objpath.c

@@ -1,0 +1,1 @@
+QEMU = qemu-system-avr

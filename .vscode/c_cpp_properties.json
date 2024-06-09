@@ -3,16 +3,15 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/inc/*",
-                "${workspaceFolder}/tmp/*"
+                "${workspaceFolder}/inc/**",
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/tmp/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/g++",
-            "cStandard": "c11",
-            "cppStandard": "c++11",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-x64",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "compilerPath": "/usr/bin/g++"
         }
     ],
     "version": 4

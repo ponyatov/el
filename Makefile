@@ -28,6 +28,7 @@ CXX    = $(TARGET)-g++
 AS     = $(TARGET)-as
 LD     = $(TARGET)-ld
 OD     = $(TARGET)-objdump
+OCP    = $(TARGET)-objcopy
 RUSTUP = $(CAR)/bin/rustup
 CARGO  = $(CAR)/bin/cargo
 QUCS   = /usr/bin/qucs-s
@@ -52,13 +53,15 @@ LDFLAGS += -T $(LDSCRIPT)
 .PHONY: all run
 all: bin/$(MODULE).hex
 run: bin/$(MODULE).hex
-# $(QEMU) $(QEMU_CFG) -device loader,file=test.hex
+	$(QEMU) $(QEMU_CFG) -device loader,file=$<
 
 .PHONY: format
 format:
 
 # rule
-bin/$(MODULE).hex: $(OBJ)
+bin/$(MODULE).hex: tmp/$(MODULE).o
+	$(OCP) -O ihex $< $@ && file $@
+tmp/$(MODULE).o: bin/objpath $(OBJ)
 	$(LD) $(LDFLAGS) -o $@ $(OBJ)
 
 tmp/%.o: src/%.S
@@ -71,7 +74,7 @@ tmp/%.o: src/hw/%.S
 	$(AS) -o $@ -c $<
 
 bin/objpath: src/objpath.lex
-	flex -o tmp/objpath.cpp $< && gcc -o $@ tmp/objpath.cpp
+	flex -o tmp/objpath.c $< && gcc -o $@ tmp/objpath.c
 
 # doc
 .PHONY: doc

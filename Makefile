@@ -53,10 +53,11 @@ ASFLAGS += $(FLAGS)
 
 # all
 .PHONY: all run
-all: bin/$(MODULE).hex
+all: bin/$(MODULE).hex tmp/$(MODULE).objdump
 run: bin/$(MODULE).hex
-	$(QEMU) $(QEMU_CFG) -device loader,file=$< -S -s &
-	gdb-multiarch
+	$(QEMU) $(QEMU_CFG) -device loader,file=$< 
+# -S -s &
+# gdb-multiarch -x .gdbinit tmp/$(MODULE).o
 
 .PHONY: format
 format:
@@ -76,12 +77,18 @@ tmp/%.o: src/cpu/%.S
 tmp/%.o: src/hw/%.S
 	$(AS) $(ASFLAGS) -o $@ -c $<
 
+tmp/%.objdump: tmp/%.o
+	$(OD) -D $< > $@
+
 bin/objpath: src/objpath.lex
 	flex -o tmp/objpath.c $< && gcc -o $@ tmp/objpath.c
 
 # doc
 .PHONY: doc
-doc:
+doc: doc/qucs/getstarted.pdf
+
+doc/qucs/getstarted.pdf:
+	$(CURL) $@ https://qucs.github.io/docs/tutorial/getstarted.pdf
 
 # install
 .PHONY: install update ref gz

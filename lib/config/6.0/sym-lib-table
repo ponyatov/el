@@ -209,4 +209,5 @@
   (lib (name "4xxx_IEEE")(type "KiCad")(uri "${EL}/symbol/4xxx_IEEE.kicad_sym")(options "")(descr ""))
   (lib (name "4xxx")(type "KiCad")(uri "${EL}/symbol/4xxx.kicad_sym")(options "")(descr ""))
   (lib (name "mosfet")(type "KiCad")(uri "${EL}/symbol/mosfet.kicad_sym")(options "")(descr ""))
+  (lib (name "terminal")(type "KiCad")(uri "${EL}/symbol/terminal.kicad_sym")(options "")(descr ""))
 )

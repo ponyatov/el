@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--***************************************-->
+<!--   File    : usb0.fsproj               -->
+<!--   Format  : TopoR Project file        -->
+<!--   Version : 2                         -->
+<!--   Program : TopoR Lite 7.0.18699      -->
+<!--   Date    : Sunday, February 04, 2024 -->
+<!--   Time    : 14:41                     -->
+<!--***************************************-->
+
+<Project>
+   <Version current="2"/>
+   <GUID>{A4372827-B742-497A-BE05-5FF62FB5D933}</GUID>
+   <Documents>
+      <Section name="PCB" isExpanded="true">
+         <File path=".\usb0.fsx" isopened="1" dateChange="2024-02-04 11:53:39"/>
+      </Section>
+      <Section name="AutoRouting" isExpanded="true">
+         <File path=".\autoroute_240204115842\usb0_191-5s.fsb" isopened="0" dateChange="2024-02-04 11:58:43"/>
+         <File path=".\autoroute_240204121156\usb0_201-6s.fsb" isopened="0" dateChange="2024-02-04 12:11:57"/>
+         <File path=".\autoroute_240204120931\usb0_204-7s.fsb" isopened="0" dateChange="2024-02-04 12:09:32"/>
+         <File path=".\autoroute_240204120003\usb0_211-1s.fsb" isopened="0" dateChange="2024-02-04 12:00:28"/>
+         <File path=".\autoroute_240204120118\usb0_218-1s.fsb" isopened="0" dateChange="2024-02-04 12:01:56"/>
+         <File path=".\autoroute_240204121016\usb0_219-2s.fsb" isopened="0" dateChange="2024-02-04 12:10:36"/>
+      </Section>
+   </Documents>
+   <Import>
+      <Specctra>
+         <Path name="C:\el\pcb\usb\usb0\usb0.dsn"/>
+      </Specctra>
+   </Import>
+</Project>

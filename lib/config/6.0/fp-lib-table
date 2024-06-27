@@ -136,4 +136,5 @@
   (lib (name "Button_Switch_Keyboard")(type "KiCad")(uri "${EL}/footprint/Button_Switch_Keyboard.pretty")(options "")(descr ""))
   (lib (name "Battery")(type "KiCad")(uri "${EL}/footprint/Battery.pretty")(options "")(descr ""))
   (lib (name "Audio_Module")(type "KiCad")(uri "${EL}/footprint/Audio_Module.pretty")(options "")(descr ""))
+  (lib (name "fan")(type "KiCad")(uri "${EL}/footprint/fan.pretty")(options "")(descr ""))
 )

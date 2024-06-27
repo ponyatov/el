@@ -1,16 +1,28 @@
 {
-	"recommendations": [
-		"ryuta46.multi-command",
-		"stkb.rewrap",
-		// "tabnine.tabnine-vscode",
-		// "ms-vscode.makefile-tools",
-		// formatters
-		"xaver.clang-format",
-		"foxundermoon.shell-format",
-		// pcb
-		"xuanli.spice",
-		// // TeX
-		// "james-yu.latex-workshop",
-		// "tomoki1207.pdf",
-	]
+    "recommendations": [
+        "stkb.rewrap",
+        "ryuta46.multi-command",
+        "tabnine.tabnine-vscode",
+        "ms-vscode.makefile-tools",
+        "ms-vscode-remote.remote-ssh",
+        // Linux
+        "foxundermoon.shell-format",
+        "coolbear.systemd-unit-file",
+        // formatters
+        "xaver.clang-format",
+        "foxundermoon.shell-format",
+        // C++
+        "ms-vscode.cpptools",
+        "jeff-hykin.better-cpp-syntax",
+        "ms-vscode.cmake-tools",
+        // flex/bison
+        "daohong-emilio.yash",
+        // low-level
+        "zixuanwang.linkerscript",
+        "dan-c-underwood.arm",
+        // Rust
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "vadimcn.vscode-lldb",
+    ]
 }

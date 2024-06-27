@@ -14,12 +14,6 @@
             "problemMatcher": []
         },
         {
-            "label": "project: updev",
-            "type": "shell",
-            "command": "make updev",
-            "problemMatcher": []
-        },
-        {
             "label": "git: shadow",
             "type": "shell",
             "command": "make shadow",

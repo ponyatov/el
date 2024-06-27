@@ -1,15 +1,15 @@
 # var
 MODULE  = $(notdir $(CURDIR))
-module  = $(shell echo $(MODULE) | tr A-Z a-z)
-OS      = $(shell uname -o|tr / _)
 NOW     = $(shell date +%d%m%y)
 REL     = $(shell git rev-parse --short=4 HEAD)
 BRANCH  = $(shell git rev-parse --abbrev-ref HEAD)
 CORES  ?= $(shell grep processor /proc/cpuinfo | wc -l)
 
-# version
-QUCS_VER    = 2.1.0-1
-RHVOICE_VER = 1.8.0
+# config
+HW = microbit
+include   hw/$(HW).mk
+include  cpu/$(CPU).mk
+include arch/$(ARCH).mk
 
 # dirs
 CWD = $(CURDIR)
@@ -18,111 +18,93 @@ DOC = $(CWD)/doc
 SRC = $(CWD)/src
 TMP = $(CWD)/tmp
 GZ  = $(HOME)/gz
+CAR = $(HOME)/.cargo
 
 # tool
 CURL   = curl -L -o
-CF     = clang-format
+CF     = clang-format -style=file -i
+CC     = $(TARGET)-gcc
+CXX    = $(TARGET)-g++
+AS     = $(TARGET)-as
+LD     = $(TARGET)-ld
+OD     = $(TARGET)-objdump
+OCP    = $(TARGET)-objcopy
+RUSTUP = $(CAR)/bin/rustup
+CARGO  = $(CAR)/bin/cargo
 QUCS   = /usr/bin/qucs-s
 
+# src
+C += $(wildcard src/*.c*)
+H += $(wildcard inc/*.h*)
+R += $(wildcard src/*.rs)
+A += $(wildcard src/*.S)
+A += $(wildcard src/hw/*.S)
+A += $(wildcard src/cpu/*.S)
+A += $(wildcard src/arch/*.S)
+
+OBJ += $(shell echo $(addsuffix .o,$(basename $(A))) | bin/objpath )
+OBJ = $(shell echo $(A)|bin/objpath)
+
+# cfg
+LDSCRIPT = hw/$(HW).lds
+LDFLAGS += -T $(LDSCRIPT)
+FLAGS   += -g
+ASFLAGS += $(FLAGS)
+
 # all
-.PHONY: all
-all:
+.PHONY: all run
+all: bin/$(MODULE).hex tmp/$(MODULE).objdump
+run: bin/$(MODULE).hex
+	$(QEMU) $(QEMU_CFG) -device loader,file=$< 
+# -S -s &
+# gdb-multiarch -x .gdbinit tmp/$(MODULE).o
 
-# clean
-.PHONY: clean
-clean:
-	find pcb -type f -regex '.+.ses$$'        -exec rm -rf {} \; &
-	find pcb -type f -regex '.+.dsn$$'        -exec rm -rf {} \; &
-	find pcb -type d -regex '.+backup.*'      -exec rm -rf {} \; &
-	find pcb -type d -regex '.+/autoroute_.+' -exec rm -rf {} \; &
-	find pcb -type d -regex '.+/topor$$'      -exec rm -rf {} \; &
-
-# slides
-slides:
-#	cd shorts/00_hello/txt ; make -f ../../Makefile
-	cd shorts/01_carrier/txt ; make -f ../../Makefile
-
-# format
 .PHONY: format
 format:
 
+# rule
+bin/$(MODULE).hex: tmp/$(MODULE).o
+	$(OCP) -O ihex $< $@ && file $@
+tmp/$(MODULE).o: bin/objpath $(LDSCRIPT) $(OBJ)
+	$(LD) $(LDFLAGS) -o $@ $(OBJ)
+
+tmp/%.o: src/%.S
+	$(AS) $(ASFLAGS) -o $@ -c $<
+tmp/%.o: src/arch/%.S
+	$(AS) $(ASFLAGS) -o $@ -c $<
+tmp/%.o: src/cpu/%.S
+	$(AS) $(ASFLAGS) -o $@ -c $<
+tmp/%.o: src/hw/%.S
+	$(AS) $(ASFLAGS) -o $@ -c $<
+
+tmp/%.objdump: tmp/%.o
+	$(OD) -D $< > $@
+
+bin/objpath: src/objpath.lex
+	flex -o tmp/objpath.c $< && gcc -o $@ tmp/objpath.c
+
 # doc
 .PHONY: doc
-doc: doc/TopoR_7.0rus.pdf
+doc: doc/qucs/getstarted.pdf
 
-doc/TopoR_7.0rus.pdf:
-	$(CURL) $@ https://www.eremex.ru/upload/iblock/c5d/TopoR_7.0rus.pdf
+doc/qucs/getstarted.pdf:
+	$(CURL) $@ https://qucs.github.io/docs/tutorial/getstarted.pdf
 
 # install
-.PHONY:  install update updev
-install: $(OS)_install doc gz
-		 $(MAKE) update
-update:  $(OS)_update
-updev:   update $(OS)_updev
-
-DEBIAN_VER  = $(shell lsb_release -rs)
-DEBIAN_NAME = $(shell lsb_release -cs)
-
-.PHONY: GNU_Linux_install GNU_Linux_update GNU_Linux_updev
-GNU_Linux_install:
-GNU_Linux_update:
-ifneq (,$(shell which apt))
+.PHONY: install update ref gz
+install: doc ref gz $(QUCS) bin/objpath
+	$(MAKE) update
+update:
 	sudo apt update
-	sudo apt install -u `cat apt.txt apt.$(DEBIAN_NAME)`
-endif
-GNU_Linux_updev:
-	sudo apt install -yu `cat apt.dev`
+	sudo apt install -uy `cat apt.txt`
+ref:
+gz:
 
-# package
-.PHONY: gz
-gz: qucs rhvoice
+$(QUCS): \
+	/etc/apt/sources.list.d/ra3xdh.list \
+	/etc/apt/trusted.gpg.d/ra3xdh.gpg
 
-QUCS_URL = download.opensuse.org/repositories/home
-QUCS_APT = /etc/apt/sources.list.d/home_ra3xdh.list
-QUCS_DEB = Debian_11
-QUCS_GPG = /etc/apt/trusted.gpg.d/home_ra3xdh.gpg
-
-.PHONY: qucs
-qucs: $(QUCS)
-
-$(QUCS): $(GZ)/qucs-s_$(QUCS_VER)_amd64.deb
-	sudo dpkg -i $< && sudo touch $@
-
-$(GZ)/qucs-s_$(QUCS_VER)_amd64.deb:
-	$(CURL) $@ https://download.opensuse.org/repositories/home:/ra3xdh/Debian_11/amd64/qucs-s_$(QUCS_VER)_amd64.deb
-
-.PHONY: rhvoice
-rhvoice: $(GZ)/rhvoice-$(RHVOICE_VER).tar.gz
-
-$(GZ)/rhvoice-$(RHVOICE_VER).tar.gz:
-	$(CURL) $@ https://github.com/RHVoice/RHVoice/releases/download/$(RHVOICE_VER)/rhvoice-$(RHVOICE_VER).tar.gz
-
-# merge
-MERGE += README.md Makefile .gitignore .doxygen apt.txt apt.dev LICENSE $(S)
-MERGE += .vscode bin doc lib inc src tmp
-
-.PHONY: dev
-dev:
-	git push -v
-	git checkout $@
-	git pull -v
-	git checkout shadow -- $(MERGE)
-
-.PHONY: shadow
-shadow:
-	git push -v
-	git checkout $@
-	git pull -v
-
-.PHONY: release
-release:
-	git tag $(NOW)-$(REL)
-	git push -v && git push -v --tags
-	$(MAKE) shadow
-
-.PHONY: zip
-zip:
-	git archive \
-		--format zip \
-		--output $(TMP)/$(MODULE)_$(NOW)_$(REL).src.zip \
-	HEAD
+/etc/apt/sources.list.d/ra3xdh.list:
+	echo 'deb http://download.opensuse.org/repositories/home:/ra3xdh/Debian_12/ /' | sudo tee $@
+/etc/apt/trusted.gpg.d/ra3xdh.gpg:
+	curl -fsSL https://download.opensuse.org/repositories/home:ra3xdh/Debian_12/Release.key | gpg --dearmor | sudo tee $@

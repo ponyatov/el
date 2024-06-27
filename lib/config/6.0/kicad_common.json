@@ -19,7 +19,14 @@
     "zone_fill_warning": false
   },
   "environment": {
-    "vars": null
+    "vars": {
+      "EL": "/home/dponyatov/el/lib",
+      "KICAD6_3DMODEL_DIR": "${EL}/3dmodel/",
+      "KICAD6_3RD_PARTY": "${EL}/3rdparty/",
+      "KICAD6_FOOTPRINT_DIR": "${EL}/footprint/",
+      "KICAD6_SYMBOL_DIR": "${EL}/symbol/",
+      "KICAD6_TEMPLATE_DIR": "${EL}/template/"
+    }
   },
   "graphics": {
     "cairo_antialiasing_mode": 0,

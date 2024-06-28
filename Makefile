@@ -85,9 +85,9 @@ bin/objpath: src/objpath.lex
 
 # doc
 .PHONY: doc
-doc: doc/qucs/getstarted.pdf
+doc: doc/qucs_getstarted.pdf
 
-doc/qucs/getstarted.pdf:
+doc/qucs_getstarted.pdf:
 	$(CURL) $@ https://qucs.github.io/docs/tutorial/getstarted.pdf
 
 # install
@@ -99,6 +99,10 @@ update:
 	sudo apt install -uy `cat apt.txt`
 ref:
 gz:
+
+config: $(HOME)/.config/kicad
+$(HOME)/.config/kicad:
+	cd $(HOME)/.config ; ln -fs $(CWD)/lib/config kicad
 
 $(QUCS): \
 	/etc/apt/sources.list.d/ra3xdh.list \

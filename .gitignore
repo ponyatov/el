@@ -4,4 +4,6 @@
 
 /docs/
 
+*.bak
+
 !.gitignore

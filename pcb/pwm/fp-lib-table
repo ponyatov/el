@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "pwm_meson")(type "KiCad")(uri "${KIPRJMOD}/pwm_meson.pretty")(options "")(descr ""))
+)

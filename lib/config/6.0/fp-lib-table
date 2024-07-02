@@ -138,4 +138,5 @@
   (lib (name "Audio_Module")(type "KiCad")(uri "${EL}/footprint/Audio_Module.pretty")(options "")(descr ""))
   (lib (name "fan")(type "KiCad")(uri "${EL}/footprint/fan.pretty")(options "")(descr ""))
   (lib (name "radiator")(type "KiCad")(uri "${EL}/footprint/radiator.pretty")(options "")(descr ""))
+  (lib (name "terminal")(type "KiCad")(uri "${EL}/footprint/terminal.pretty")(options "")(descr ""))
 )

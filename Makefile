@@ -23,6 +23,7 @@ CAR = $(HOME)/.cargo
 # tool
 CURL   = curl -L -o
 CF     = clang-format -style=file -i
+REF    = git clone --depth 1
 CC     = $(TARGET)-gcc
 CXX    = $(TARGET)-g++
 AS     = $(TARGET)-as
@@ -85,9 +86,9 @@ bin/objpath: src/objpath.lex
 
 # doc
 .PHONY: doc
-doc: doc/qucs_getstarted.pdf
+doc: doc/qucs/getstarted.pdf
 
-doc/qucs_getstarted.pdf:
+doc/qucs/getstarted.pdf:
 	$(CURL) $@ https://qucs.github.io/docs/tutorial/getstarted.pdf
 
 # install
@@ -97,12 +98,9 @@ install: doc ref gz $(QUCS) bin/objpath
 update:
 	sudo apt update
 	sudo apt install -uy `cat apt.txt`
-ref:
+ref: \
+	ref/STM32_open_pin_data/README.md
 gz:
-
-config: $(HOME)/.config/kicad
-$(HOME)/.config/kicad:
-	cd $(HOME)/.config ; ln -fs $(CWD)/lib/config kicad
 
 $(QUCS): \
 	/etc/apt/sources.list.d/ra3xdh.list \
@@ -112,3 +110,7 @@ $(QUCS): \
 	echo 'deb http://download.opensuse.org/repositories/home:/ra3xdh/Debian_12/ /' | sudo tee $@
 /etc/apt/trusted.gpg.d/ra3xdh.gpg:
 	curl -fsSL https://download.opensuse.org/repositories/home:ra3xdh/Debian_12/Release.key | gpg --dearmor | sudo tee $@
+
+
+ref/STM32_open_pin_data/README.md:
+	$(REF) https://github.com/STMicroelectronics/STM32_open_pin_data.git ref/STM32_open_pin_data

@@ -99,7 +99,7 @@ update:
 	sudo apt update
 	sudo apt install -uy `cat apt.txt`
 ref: \
-	ref/STM32_open_pin_data/README.md
+	ref/STM32_open_pin_data/README.md ref/stm32-svd/README.md
 gz:
 
 $(QUCS): \
@@ -114,3 +114,5 @@ $(QUCS): \
 
 ref/STM32_open_pin_data/README.md:
 	$(REF) https://github.com/STMicroelectronics/STM32_open_pin_data.git ref/STM32_open_pin_data
+ref/stm32-svd/README.md:
+	$(REF) https://github.com/ponyatov/stm32-svd ref/stm32-svd

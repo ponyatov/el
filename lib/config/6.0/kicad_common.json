@@ -25,7 +25,8 @@
       "KICAD6_3RD_PARTY": "${EL}/3rdparty/",
       "KICAD6_FOOTPRINT_DIR": "${EL}/footprint/",
       "KICAD6_SYMBOL_DIR": "${EL}/symbol/",
-      "KICAD6_TEMPLATE_DIR": "${EL}/template/"
+      "KICAD6_TEMPLATE_DIR": "${EL}/template/",
+      "KICAD_USER_TEMPLATE_DIR": "${EL}/user_templ/"
     }
   },
   "graphics": {
@@ -69,6 +70,6 @@
     "pdf_viewer_name": "",
     "text_editor": "",
     "use_system_pdf_viewer": true,
-    "working_dir": "/home/dponyatov/el/lib/symbol"
+    "working_dir": "/home/dponyatov"
   }
 }

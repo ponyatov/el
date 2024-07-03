@@ -11,6 +11,9 @@ include   hw/$(HW).mk
 include  cpu/$(CPU).mk
 include arch/$(ARCH).mk
 
+# version
+QUCS_VER = 24.2.1-1
+
 # dirs
 CWD = $(CURDIR)
 BIN = $(CWD)/bin
@@ -19,6 +22,7 @@ SRC = $(CWD)/src
 TMP = $(CWD)/tmp
 GZ  = $(HOME)/gz
 CAR = $(HOME)/.cargo
+DISTR = $(HOME)/distr/Linux/tools
 
 # tool
 CURL   = curl -L -o
@@ -33,6 +37,13 @@ OCP    = $(TARGET)-objcopy
 RUSTUP = $(CAR)/bin/rustup
 CARGO  = $(CAR)/bin/cargo
 QUCS   = /usr/bin/qucs-s
+
+# package
+.PHONY: qucs
+qucs: $(QUCS)
+QUCS_DEB = $(DISTR)/qucs-s_$(QUCS_VER)_amd64.deb
+$(QUCS): $(QUCS_DEB)
+	sudo dpkg -i $< && sudo touch $@
 
 # src
 C += $(wildcard src/*.c*)
@@ -100,11 +111,15 @@ update:
 	sudo apt install -uy `cat apt.txt`
 ref: \
 	ref/STM32_open_pin_data/README.md ref/stm32-svd/README.md
-gz:
+gz: \
+	$(QUCS_DEB)
 
 $(QUCS): \
 	/etc/apt/sources.list.d/ra3xdh.list \
 	/etc/apt/trusted.gpg.d/ra3xdh.gpg
+
+$(QUCS_DEB):
+	$(CURL) $@ http://ftp.lysator.liu.se/pub/opensuse/repositories/home%3A/ra3xdh/Debian_12/amd64/qucs-s_$(QUCS_VER)_amd64.deb
 
 /etc/apt/sources.list.d/ra3xdh.list:
 	echo 'deb http://download.opensuse.org/repositories/home:/ra3xdh/Debian_12/ /' | sudo tee $@

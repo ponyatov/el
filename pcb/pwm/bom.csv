@@ -1,0 +1,8 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"Q8,Q6,Q1,Q7,Q5,Q2,Q4,Q3";"TO-220-3_Vertical";8;"IRFB4321PBF";;;
+2;"X3,X4";"CWF-2";2;"Conn_01x02_Male";;;
+3;"REF**,REF**";"RQD6010MS";2;"RQD6010MS";;;
+4;"X2,X1";"PLS-4";2;"Conn_01x04_Male";;;
+5;"R1,R2";"R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical";2;"B57045K";;;
+6;"REF**,REF**";"pwm_radiator";2;"pwm_radiator";;;
+7;"U1";"pwm_meson0";1;"pwm_meson0";;;

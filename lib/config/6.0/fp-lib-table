@@ -139,4 +139,5 @@
   (lib (name "fan")(type "KiCad")(uri "${EL}/footprint/fan.pretty")(options "")(descr ""))
   (lib (name "radiator")(type "KiCad")(uri "${EL}/footprint/radiator.pretty")(options "")(descr ""))
   (lib (name "terminal")(type "KiCad")(uri "${EL}/footprint/terminal.pretty")(options "")(descr ""))
+  (lib (name "mosfet")(type "KiCad")(uri "${EL}/footprint/mosfet.pretty")(options "")(descr ""))
 )

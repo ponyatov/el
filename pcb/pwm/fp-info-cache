@@ -1,4 +1,4 @@
-21514128560119826
+21523939259224077
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -87541,6 +87541,13 @@ TO-220-3 Vertical RM 2.54mm
 0
 3
 3
+mosfet
+TO-220AB_m
+TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
+TO-220-3 Vertical RM 2.54mm
+0
+3
+3
 pwm_meson
 pwm_meson0
 
@@ -87583,3 +87590,10 @@ PLS-4
 0
 4
 4
+terminal
+screw_M4
+
+
+0
+0
+0

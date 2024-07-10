@@ -7,12 +7,12 @@ P ?= ../pcb/pwm/pwm.kicad_pcb
 all: $(F)
 	dotnet run $(P)
 
+# FSLEX  = dotnet $(shell find ~/.nuget ~/.dotnet -regex .+/fslex.dll )
+# FSYACC = dotnet $(shell find ~/.nuget ~/.dotnet -regex .+/fsyacc.dll)
 # Lexer.fs: Lexer.fsl
-# 	dotnet ~/.nuget/packages/fslexyacc/11.3.0/build/fslex/net6.0/fslex.dll \
-# 		-o $@ --module Lexer --unicode $<
+# 	$(FSLEX) -o $@ --module Lexer --unicode $<
 # Parser.fs: Parser.fsy
-# 	dotnet ~/.nuget/packages/fslexyacc/11.3.0/build/fsyacc/net6.0/fsyacc.dll \
-# 		-o $@ --module Parser $<
+# 	$(FSYACC) -o $@ --module Parser $<
 
 # format
 .PHONY: format

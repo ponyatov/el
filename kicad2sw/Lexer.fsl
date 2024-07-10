@@ -5,15 +5,23 @@ open Parser
 let lexeme lexbuf = LexBuffer<_>.LexemeString lexbuf
 }
 
-let digit = ['0'-'9']
-let operator = ['+' '-' '*' '/']
-let whitespace = [' ' '\t']
+let sign       = ['-' '+']
+let digit      = ['0'-'9']
+let id         = ['_' 'a'-'z' 'A'-'Z']+
+let whitespace = [' ' '\t' '\r' '\n']
+let uid        = ['-' '0'-'9' 'a'-'f']+
+let hex        = "0x" ['0'-'9' 'a'-'f' '_']+
 
 rule tokenize = parse
-| whitespace        { tokenize lexbuf }
-| ['-']?digit+      { Number ( System.Int32.Parse( lexeme lexbuf ) ) }
-| operator          { OP ( lexeme lexbuf ) }
-| '('               { LPAREN }
-| ')'               { RPAREN }
-| eof               { EOF }
-| _                 { lexeme lexbuf |> sprintf "Parsing error: %s" |> failwith }
+| whitespace              { tokenize lexbuf }
+| id                      { ID ( lexeme lexbuf ) }
+| sign? digit+ '.' digit+ { Num ( System.Double.Parse( lexeme lexbuf )) }
+| sign? digit+            { Int ( System.Int64.Parse ( lexeme lexbuf )) }
+| hex                     { Hex ( lexeme lexbuf ) }
+| uid                     { UID ( lexeme lexbuf ) }
+| '"' [^ '"'] * '"'       { Str ( lexeme lexbuf )}
+
+| '('            { LP }
+| ')'            { RP }
+| eof            { EOF }
+| _              { lexeme lexbuf |> sprintf "Parsing error: %s" |> failwith }

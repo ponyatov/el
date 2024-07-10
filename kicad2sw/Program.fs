@@ -10,7 +10,7 @@ type Stmt =
     | Nop
     | Halt
 
-open System
+open System.IO
 open FSharp.Text.Lexing
 open Lexer
 open Parser
@@ -21,15 +21,13 @@ let evaluate (input:string) =
   string output
 
 [<EntryPoint>]
-let main argv =
+let main (argv:string array) =
 
-    printfn "Press Ctrl+c to Exit"
-
-    while true do
-        printf "Evaluate > "
-        let input = Console.ReadLine()
+    for arg in argv do
+        let pcb = File.ReadAllText arg
+        // printfn "%s" pcb[0..47]
         try
-            let result = evaluate input
+            let result = evaluate pcb
             printfn "%s" result
         with ex -> printfn "%s" (ex.ToString())
 

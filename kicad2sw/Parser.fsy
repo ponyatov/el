@@ -1,22 +1,31 @@
 %{
-let getOp op = 
-    match op with 
-    | "+" -> ( + )
-    | "-" -> ( - )
-    | "/" -> ( / )
-    | "*" -> ( * )
-    | _ -> failwith "unknown operator"
+// let getOp op = 
+//     match op with 
+//     | "+" -> ( + )
+//     | "-" -> ( - )
+//     | "/" -> ( / )
+//     | "*" -> ( * )
+//     | _ -> failwith "unknown operator"
 %}
 
-%token <int> Number
-%token <string> OP
-%token EOF LPAREN RPAREN
+%token <int64> Int
+%token <double> Num
+%token <string> ID UID Hex
+%token <string> Str
+%token LP RP EOF
 %start parse
-%type <int> parse
+%type <unit> parse
+%type <unit> ex
 %%
 
-parse: expr EOF        	     { $1 }
+parse: {} | parse ex {}
 
-expr: Number                 { $1 }
-    | expr OP expr           { $1 |> (getOp $2) <| $3 }
-    | LPAREN expr RPAREN     { $2 }
+ex : Int   { printfn "Int:<%i>"  $1 }
+   | Hex   { printfn "Hex:<%s>"  $1 }
+   | Num   { printfn "Num:<%f>"  $1 }
+   | ID    { printfn "ID:<%s>"   $1 }
+   | UID   { printfn "UID:<%s>"  $1 }
+   | Str   { printfn "Str:<%s>"  $1 }
+   | LP    { }
+   | RP    { }
+   | EOF   { }

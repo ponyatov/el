@@ -13,6 +13,7 @@
     // files
     "files.exclude": {
         "docs/**": true,
+        "obj/Debug": true, "obj": true,
         "kicad2sw/bin": true, "kicad2sw/obj": true,
     },
     "files.watcherExclude": {

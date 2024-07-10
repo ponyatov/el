@@ -1,4 +1,19 @@
-
 {
 open FSharp.Text.Lexing
+open Parser
+
+let lexeme lexbuf = LexBuffer<_>.LexemeString lexbuf
 }
+
+let digit = ['0'-'9']
+let operator = ['+' '-' '*' '/']
+let whitespace = [' ' '\t']
+
+rule tokenize = parse
+| whitespace        { tokenize lexbuf }
+| ['-']?digit+      { Number ( System.Int32.Parse( lexeme lexbuf ) ) }
+| operator          { OP ( lexeme lexbuf ) }
+| '('               { LPAREN }
+| ')'               { RPAREN }
+| eof               { EOF }
+| _                 { lexeme lexbuf |> sprintf "Parsing error: %s" |> failwith }

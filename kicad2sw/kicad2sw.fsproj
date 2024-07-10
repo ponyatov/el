@@ -18,6 +18,7 @@
     </FsYacc>
 
     <Compile Include="Parser.fsi" />
+    <Compile Include="Lexer.fsi" />
     <Compile Include="Parser.fs" />
     <Compile Include="Lexer.fs" />
     <Compile Include="Program.fs" />

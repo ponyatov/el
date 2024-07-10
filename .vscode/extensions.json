@@ -20,9 +20,12 @@
         // low-level
         "zixuanwang.linkerscript",
         "dan-c-underwood.arm",
-        // Rust
-        "rust-lang.rust-analyzer",
-        "tamasfe.even-better-toml",
-        "vadimcn.vscode-lldb",
+        // // Rust
+        // "rust-lang.rust-analyzer",
+        // "tamasfe.even-better-toml",
+        // "vadimcn.vscode-lldb",
+        // F#
+        "ionide.ionide-fsharp",
+        "mnxn.fsharp-fsl-fsy",
     ]
 }

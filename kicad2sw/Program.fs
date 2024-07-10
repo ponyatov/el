@@ -5,4 +5,9 @@ type Expr =
     | Str of string
     | Int of int
 
+type Stmt =
+    | Assign of string * Expr
+    | Nop
+    | Halt
+
 printfn "Hello"

@@ -205,7 +205,7 @@
         (stroke (width 0.1524) (type default) (color 0 0 0 0))
         (fill (type none))
       )
-      (pin bidirectional line (at -5.08 0 0) (length 3.81)
+      (pin power_in line (at -5.08 0 0) (length 3.81)
         (name "Pin_1" (effects (font (size 1.27 1.27))))
         (number "1" (effects (font (size 1.27 1.27))))
       )

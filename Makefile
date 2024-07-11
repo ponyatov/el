@@ -126,7 +126,7 @@ $(QUCS): \
 	/etc/apt/trusted.gpg.d/ra3xdh.gpg
 
 $(DISTR)/CAD/EDA/$(QUCS_DEB):
-	$(CURL) $@ http://ftp.lysator.liu.se/pub/opensuse/repositories/home%3A/ra3xdh/Debian_12/amd64/$(QUCS_DEB)
+	$(CURL) $@ http://download.opensuse.org/repositories/home:/ra3xdh/Debian_12/amd64/$(QUCS_DEB)
 
 /etc/apt/sources.list.d/ra3xdh.list:
 	echo 'deb http://download.opensuse.org/repositories/home:/ra3xdh/Debian_12/ /' | sudo tee $@

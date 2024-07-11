@@ -2,3 +2,4 @@
 git update-index --assume-unchanged lib/config/6.0/kicad.json
 git update-index --assume-unchanged lib/config/6.0/kicad_common.json
 git update-index --assume-unchanged lib/config/6.0/pcbnew.json
+git update-index --assume-unchanged lib/config/6.0/fpedit.json

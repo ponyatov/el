@@ -86,7 +86,7 @@
       "tools_drill_multidepth": true,
       "tools_paint_method": 0,
       "dwelltime": 1.0,
-      "vtipangle": 30.0
+      "vtipangle": 60.0
     },
     "name": "endmill_2.0",
     "offset": "Path",
@@ -182,12 +182,12 @@
       "tools_drill_multidepth": false,
       "tol_min": 0.0,
       "dwelltime": 1.0,
-      "vtipangle": 30.0
+      "vtipangle": 60.0
     },
     "name": "grav_0.3",
     "offset": "Path",
     "type": "Rough",
-    "tool_type": "C1",
+    "tool_type": "V",
     "offset_value": 0.0,
     "tooldia": 0.3
   }

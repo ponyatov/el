@@ -3,18 +3,30 @@ M48
 ; FORMAT={-:-/ absolute / metric / decimal}
 ; #@! TF.CreationDate,2024-07-11T19:44:01+04:00
 ; #@! TF.GenerationSoftware,Kicad,Pcbnew,6.0.11+dfsg-1
-; #@! TF.FileFunction,NonPlated,1,2,NPTH
+; #@! TF.FileFunction,Plated,1,2,PTH
 FMAT,2
 METRIC
-; #@! TA.AperFunction,NonPlated,PTH,ComponentDrill
-T1C14.000
+; #@! TA.AperFunction,Plated,PTH,ComponentDrill
+T1C4.00
+T2C6.00
+T3C8.00
 %
 G90
 G05
 T1
-X8.88Y125.63
-X58.88Y125.63
-X85.08Y125.63
-X135.08Y125.63
+X42.38Y107.44
+X42.38Y46.44
+X104.12Y107.98
+X104.12Y46.98
+T2
+X42.38Y107.44
+X42.38Y46.44
+X104.12Y107.98
+X104.12Y46.98
+T3
+X42.38Y107.44
+X42.38Y46.44
+X104.12Y107.98
+X104.12Y46.98
 T0
 M30

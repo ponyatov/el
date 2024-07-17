@@ -43,14 +43,14 @@ QUCS   = /usr/bin/qucs-s
 .PHONY: qucs
 qucs: $(QUCS)
 QUCS_DEB = qucs-s_$(QUCS_VER)-1_amd64.deb
-$(QUCS): $(DISTR)/CAD/EDA/$(QUCS_DEB)
+$(QUCS): $(DISTR)/EDA/$(QUCS_DEB)
 	sudo dpkg -i $< && sudo touch $@
 
 FLATCAM_EXE = FlatCAM-Win32-$(FLATCAM_VER)-Install.exe
 FLATCAM     = FlatCAM-$(FLATCAM_VER)
 FLATCAM_GZ  = $(FLATCAM).zip
 .PHONY: flatcam
-flatcam: $(DISTR)/CAD/EDA/$(FLATCAM_EXE) $(GZ)/$(FLATCAM_GZ)
+flatcam: $(DISTR)/EDA/$(FLATCAM_EXE) $(GZ)/$(FLATCAM_GZ)
 
 # src
 C += $(wildcard src/*.c*)
@@ -119,13 +119,13 @@ update:
 ref: \
 	ref/STM32_open_pin_data/README.md ref/stm32-svd/README.md
 gz: \
-	$(QUCS_DEB) flatcam
+	$(DISTR)/EDA/$(QUCS_DEB) flatcam flatcam/README.md
 
 $(QUCS): \
 	/etc/apt/sources.list.d/ra3xdh.list \
 	/etc/apt/trusted.gpg.d/ra3xdh.gpg
 
-$(DISTR)/CAD/EDA/$(QUCS_DEB):
+$(DISTR)/EDA/$(QUCS_DEB):
 	$(CURL) $@ http://download.opensuse.org/repositories/home:/ra3xdh/Debian_12/amd64/$(QUCS_DEB)
 
 /etc/apt/sources.list.d/ra3xdh.list:
@@ -139,7 +139,10 @@ ref/STM32_open_pin_data/README.md:
 ref/stm32-svd/README.md:
 	$(REF) https://github.com/ponyatov/stm32-svd ref/stm32-svd
 
-$(DISTR)/CAD/EDA/$(FLATCAM_EXE):
+$(DISTR)/EDA/$(FLATCAM_EXE):
 	$(CURL) $@ https://bitbucket.org/jpcgt/flatcam/downloads/$(FLATCAM_EXE)
 $(GZ)/$(FLATCAM_GZ):
 	$(CURL) $@ https://bitbucket.org/jpcgt/flatcam/downloads/$(FLATCAM_GZ)
+
+flatcam/README.md:
+	git clone https://bitbucket.org/jpcgt/flatcam.git

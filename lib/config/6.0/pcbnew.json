@@ -274,8 +274,8 @@
     "all_layers_on_one_page": 1,
     "check_zones_before_plotting": true,
     "edgecut_on_all_layers": false,
-    "fine_scale_x": 0.0,
-    "fine_scale_y": 0.0,
+    "fine_scale_x": 1.0,
+    "fine_scale_y": 1.0,
     "mirror": false,
     "pads_drill_mode": 2,
     "ps_fine_width_adjust": 0.0

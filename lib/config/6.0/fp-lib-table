@@ -141,4 +141,5 @@
   (lib (name "terminal")(type "KiCad")(uri "${EL}/footprint/terminal.pretty")(options "")(descr ""))
   (lib (name "mosfet")(type "KiCad")(uri "${EL}/footprint/mosfet.pretty")(options "")(descr ""))
   (lib (name "mechanic")(type "KiCad")(uri "${EL}/footprint/mechanic.pretty")(options "")(descr ""))
+  (lib (name "resistor")(type "KiCad")(uri "${EL}/footprint/resistor.pretty")(options "")(descr ""))
 )

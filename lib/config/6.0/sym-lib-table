@@ -211,4 +211,5 @@
   (lib (name "mosfet")(type "KiCad")(uri "${EL}/symbol/mosfet.kicad_sym")(options "")(descr ""))
   (lib (name "terminal")(type "KiCad")(uri "${EL}/symbol/terminal.kicad_sym")(options "")(descr ""))
   (lib (name "sensor")(type "KiCad")(uri "${EL}/symbol/sensor.kicad_sym")(options "")(descr ""))
+  (lib (name "crystal")(type "KiCad")(uri "${EL}/symbol/crystal.kicad_sym")(options "")(descr ""))
 )

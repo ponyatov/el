@@ -1,9 +1,7 @@
 check mill tech capabilities with 0.6\0.5mm and lower
 
 USB connectors
-- mini B
-- micro
-- usb C
+- USB/M-1J (DS1104) mini B
 
 smart control
 - CH340C (no clock) USB-UART SOP-16
@@ -13,6 +11,10 @@ LiIon charger
 - TP4056 = XL4056A Youtai
 - AP9101CK6-AYTRG1 SOT26
 - FS8205A TSSOP-8 dual n-MOSFET
+
+LED
+- LTST-C150KRKT red 1206
+- LTST-C150KGKT green 1206
 
 https://github.com/jamesmunns/lipo-stamp
 https://www.instructables.com/How-to-Make-Lipo-Battery-Charger-Circuit/

@@ -1132,7 +1132,7 @@
     (property "Reference" "U3" (id 0) (at 154.4194 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "STM32F030F4Px" (id 1) (at 154.4194 88.9 0)
+    (property "Value" "F030F4Px" (id 1) (at 154.4194 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" (id 2) (at 142.24 83.82 0)
@@ -1244,7 +1244,7 @@
       (reference "U2") (unit 1) (value "CH340C") (footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
     )
     (path "/9c228180-21bc-4b39-b26f-0b1a0dfeee4c"
-      (reference "U3") (unit 1) (value "STM32F030F4Px") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
+      (reference "U3") (unit 1) (value "F030F4Px") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
     )
     (path "/2c803c1b-17e8-4d10-bf2e-c46c5b6727f7"
       (reference "USB1") (unit 1) (value "USB_B_Mini") (footprint "Connector_USB:USB_Mini-B_DS1104")

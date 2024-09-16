@@ -1,3 +1,6 @@
+# `bat`
+## MCU-controlled USB/battery pill
+
 check mill tech capabilities with 0.6\0.5mm and lower
 
 USB connectors

@@ -212,4 +212,6 @@
   (lib (name "terminal")(type "KiCad")(uri "${EL}/symbol/terminal.kicad_sym")(options "")(descr ""))
   (lib (name "sensor")(type "KiCad")(uri "${EL}/symbol/sensor.kicad_sym")(options "")(descr ""))
   (lib (name "crystal")(type "KiCad")(uri "${EL}/symbol/crystal.kicad_sym")(options "")(descr ""))
+  (lib (name "fs8205a")(type "Legacy")(uri "${EL}/symbol/fs8205a.lib")(options "")(descr ""))
+  (lib (name "Fortune_Semiconductor")(type "KiCad")(uri "${EL}/symbol/Fortune_Semiconductor.kicad_sym")(options "")(descr ""))
 )

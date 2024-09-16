@@ -146,3 +146,9 @@ $(GZ)/$(FLATCAM_GZ):
 
 flatcam/README.md:
 	git clone https://bitbucket.org/jpcgt/flatcam.git
+
+
+# pcb
+.PHONY: bat
+bat: pcb/bat/bat.kicad_pro
+	kicad $< &

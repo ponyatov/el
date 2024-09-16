@@ -50,6 +50,7 @@
   },
   "system": {
     "file_history": [
+      "/home/dponyatov/el/pcb/bat/bat.kicad_pro",
       "/home/dponyatov/el/pcb/proto/proto.kicad_pro",
       "/home/dponyatov/el/pcb/proto/proto/proto.kicad_pro",
       "/home/dponyatov/el/pcb/pwm/pwm.kicad_pro"
@@ -59,7 +60,7 @@
     "last_metric_units": 1,
     "max_undo_items": 0,
     "open_projects": [
-      "/home/dponyatov/el/pcb/proto/proto.kicad_pro"
+      "/home/dponyatov/el/pcb/bat/bat.kicad_pro"
     ],
     "units": 1
   },
@@ -107,7 +108,7 @@
       "user_grid_y": "10 mil"
     },
     "maximized": true,
-    "mru_path": "/home/dponyatov/el/pcb/proto/",
+    "mru_path": "/home/dponyatov/el/pcb/bat/",
     "perspective": "layout2|name=MainToolbar;caption=;state=139644;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=227;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=Project Files;state=1532;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=250;besth=-1;minw=250;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Launcher;caption=Editors;state=508;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=583;besth=560;minw=583;minh=560;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,2,0)=34|dock_size(4,1,0)=250|dock_size(5,0,0)=583|",
     "pos_x": 0,
     "pos_y": 27,

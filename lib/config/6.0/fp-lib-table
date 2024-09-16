@@ -143,4 +143,5 @@
   (lib (name "mechanic")(type "KiCad")(uri "${EL}/footprint/mechanic.pretty")(options "")(descr ""))
   (lib (name "resistor")(type "KiCad")(uri "${EL}/footprint/resistor.pretty")(options "")(descr ""))
   (lib (name "crystal")(type "KiCad")(uri "${EL}/footprint/crystal.pretty")(options "")(descr ""))
+  (lib (name "power")(type "KiCad")(uri "${EL}/footprint/power.pretty")(options "")(descr ""))
 )

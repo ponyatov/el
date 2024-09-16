@@ -213,4 +213,5 @@
   (lib (name "sensor")(type "KiCad")(uri "${EL}/symbol/sensor.kicad_sym")(options "")(descr ""))
   (lib (name "crystal")(type "KiCad")(uri "${EL}/symbol/crystal.kicad_sym")(options "")(descr ""))
   (lib (name "Fortune_Semiconductor")(type "KiCad")(uri "${EL}/symbol/Fortune_Semiconductor.kicad_sym")(options "")(descr ""))
+  (lib (name "fuse")(type "KiCad")(uri "${EL}/symbol/fuse.kicad_sym")(options "")(descr ""))
 )

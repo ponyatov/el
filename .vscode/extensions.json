@@ -4,28 +4,34 @@
         "ryuta46.multi-command",
         "tabnine.tabnine-vscode",
         "ms-vscode.makefile-tools",
-        "ms-vscode-remote.remote-ssh",
         // Linux
         "foxundermoon.shell-format",
+        "ms-vscode-remote.remote-ssh",
         "coolbear.systemd-unit-file",
+        // "ms-azuretools.vscode-docker",
         // formatters
         "xaver.clang-format",
         "foxundermoon.shell-format",
+        // misc
+        "usernamehw.errorlens",
+        // "hbenl.vscode-test-explorer",
         // C++
         "ms-vscode.cpptools",
         "jeff-hykin.better-cpp-syntax",
-        "ms-vscode.cmake-tools",
-        // flex/bison
+        // "ms-vscode.cmake-tools",
+        // parser
         "daohong-emilio.yash",
-        // low-level
+        "rreverser.ragel",
+        // Rust
+        "rust-lang.rust-analyzer",
+        "statiolake.vscode-rustfmt",
+        "tamasfe.even-better-toml",
+        "vadimcn.vscode-lldb",
+        // embedded
+        "marus25.cortex-debug",
         "zixuanwang.linkerscript",
+        "trond-snekvik.gnu-mapfiles",
         "dan-c-underwood.arm",
-        // // Rust
-        // "rust-lang.rust-analyzer",
-        // "tamasfe.even-better-toml",
-        // "vadimcn.vscode-lldb",
-        // F#
-        "ionide.ionide-fsharp",
-        "mnxn.fsharp-fsl-fsy",
+        "luveti.kconfig",
     ]
 }

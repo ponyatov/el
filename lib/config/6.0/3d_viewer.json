@@ -45,21 +45,21 @@
     "use_theme": false
   },
   "render": {
-    "clip_silk_on_via_annulus": false,
+    "clip_silk_on_via_annulus": true,
     "engine": 0,
     "grid_type": 0,
     "material_mode": 0,
-    "opengl_AA_disableOnMove": false,
+    "opengl_AA_disableOnMove": true,
     "opengl_AA_mode": 3,
-    "opengl_copper_thickness": false,
+    "opengl_copper_thickness": true,
     "opengl_highlight_on_rollover": true,
     "opengl_holes_disableOnMove": false,
     "opengl_render_bbox_only_OnMove": false,
     "opengl_selection_color": "rgb(0, 255, 0)",
-    "opengl_show_model_bbox": false,
-    "opengl_thickness_disableOnMove": false,
+    "opengl_show_model_bbox": true,
+    "opengl_thickness_disableOnMove": true,
     "opengl_vias_disableOnMove": false,
-    "plated_and_bare_copper": false,
+    "plated_and_bare_copper": true,
     "raytrace_anti_aliasing": true,
     "raytrace_backfloor": false,
     "raytrace_lightAzimuth": [
@@ -109,7 +109,7 @@
     "raytrace_spread_refractions": 0.02500000037252903,
     "raytrace_spread_shadows": 0.05000000074505806,
     "realistic": true,
-    "show_adhesive": true,
+    "show_adhesive": false,
     "show_axis": true,
     "show_board_body": true,
     "show_comments": true,
@@ -118,10 +118,10 @@
     "show_footprints_normal": true,
     "show_footprints_virtual": true,
     "show_silkscreen": true,
-    "show_soldermask": true,
+    "show_soldermask": false,
     "show_solderpaste": true,
     "show_zones": true,
-    "subtract_mask_from_silk": false
+    "subtract_mask_from_silk": true
   },
   "system": {
     "file_history": [],
@@ -176,11 +176,11 @@
     },
     "maximized": false,
     "mru_path": "",
-    "perspective": "",
+    "perspective": "layout2|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=802;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=InfoBar;caption=;state=131454;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=20;besth=30;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=1362;besth=702;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(1,6,0)=34|dock_size(5,0,0)=408|",
     "pos_x": 0,
-    "pos_y": 0,
-    "size_x": 0,
-    "size_y": 0,
+    "pos_y": 20,
+    "size_x": 1362,
+    "size_y": 724,
     "zoom_factors": []
   }
 }
